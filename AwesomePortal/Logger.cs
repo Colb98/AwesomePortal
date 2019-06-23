@@ -19,7 +19,7 @@ namespace AwesomePortal
             {
                 using (StreamWriter streamWriter = new StreamWriter(filePath, true))
                 {
-                    streamWriter.WriteLine(message);
+                    streamWriter.WriteLine("[" + System.DateTime.Now + "]:  " + message);
                     streamWriter.Close();
                 }
             }

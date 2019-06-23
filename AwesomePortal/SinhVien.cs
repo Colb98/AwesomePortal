@@ -8,6 +8,7 @@ namespace AwesomePortal
 {
     class SinhVien : TaiKhoan
     {
+        private static SinhVien instance;
         private string mssv;
         private string name;
         private ChuongTrinh chuongTrinh;
@@ -15,6 +16,17 @@ namespace AwesomePortal
         private string khoaTuyen;
         private List<DangKyHocPhan> dangKyHocPhan;
 
+        private SinhVien()
+        {
+
+        }
+
+        public static SinhVien getInstance()
+        {
+            if (instance == null)
+                instance = new SinhVien();
+            return instance;
+        }
         public override string ToString()
         {
             return "MSSV: " + mssv + Environment.NewLine +
