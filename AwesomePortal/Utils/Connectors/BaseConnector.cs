@@ -1,4 +1,5 @@
 ﻿using AwesomePortal.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,17 @@ namespace AwesomePortal.Utils.Connectors
                 instance = new BaseConnector();
             return instance;
         }
+        protected async Task<Object> PostObjectAsync(string path, Object o)
+        {
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, o);
+            response.EnsureSuccessStatusCode();
+            Object ans = null;
+            if (response.IsSuccessStatusCode)
+            {
+                ans = await response.Content.ReadAsAsync<Object>();
+            }
+            return ans;
+        }
 
         protected async Task<Object> GetObjectAsync(string path)
         {
@@ -39,6 +51,19 @@ namespace AwesomePortal.Utils.Connectors
             }
             return o;
         }
+
+        protected async Task<Object> PostListObjectAsync(string path, List<Object> o)
+        {
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, o);
+            response.EnsureSuccessStatusCode();
+            Object ans = null;
+            if (response.IsSuccessStatusCode)
+            {
+                ans = await response.Content.ReadAsAsync<Object>();
+            }
+            return ans;
+        }
+
         protected async Task<List<Object>> GetListObjectAsync(string path)
         {
             HttpResponseMessage response = await client.GetAsync(path);
@@ -58,6 +83,21 @@ namespace AwesomePortal.Utils.Connectors
                 // Get the product
                 Object o = await GetObjectAsync(path);
                 return o;
+            }
+            catch (Exception e)
+            {
+                LogHelper.Log(e.Message);
+            }
+            return null;
+        }
+
+        public async Task<Object> PostObject(string path, Object o)
+        {
+            try
+            {
+                // Get the product
+                Object ans = await PostObjectAsync(path, o);
+                return ans;
             }
             catch (Exception e)
             {
@@ -88,7 +128,7 @@ namespace AwesomePortal.Utils.Connectors
             client.BaseAddress = new Uri("http://localhost:3000/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+              new MediaTypeWithQualityHeaderValue("application/json"));
         }
     }
 }

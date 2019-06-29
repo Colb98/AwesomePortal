@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AuthChecker.cs" />
     <Compile Include="Controllers\ListHocPhanCreator.cs" />
     <Compile Include="Controllers\SinhVienInfo.cs" />
     <Compile Include="Forms\DangKyHocPhanUC.cs">
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="Forms\DangKyHocPhanUC.Designer.cs">
       <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginUC.Designer.cs">
+      <DependentUpon>LoginUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -95,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginUC.resx">
+      <DependentUpon>LoginUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

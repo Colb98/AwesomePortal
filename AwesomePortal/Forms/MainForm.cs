@@ -15,11 +15,18 @@ namespace AwesomePortal.Forms
         public MainForm()
         {
             InitializeComponent();
-            ShowDKHP();
+            loginUC1.OnLoginSuccess += LoginUC1_OnLoginSuccess;
+        }
+
+        private void LoginUC1_OnLoginSuccess(int errorCode)
+        {
+            if (errorCode == 0)
+                ShowDKHP();
         }
 
         public void ShowDKHP()
         {
+            dkhp_panel.BringToFront();
             dangKyHocPhanUC1.Show();
             dangKyHocPhanUC1.RenderEverything();
         }

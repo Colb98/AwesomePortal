@@ -28,42 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dkhp_panel = new System.Windows.Forms.Panel();
             this.dangKyHocPhanUC1 = new AwesomePortal.Forms.DangKyHocPhanUC();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.login_panel = new System.Windows.Forms.Panel();
+            this.loginUC1 = new AwesomePortal.Forms.LoginUC();
+            this.navigator_panel = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.dkhp_panel.SuspendLayout();
+            this.login_panel.SuspendLayout();
+            this.navigator_panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dkhp_panel
+            // 
+            this.dkhp_panel.AutoScroll = true;
+            this.dkhp_panel.AutoSize = true;
+            this.dkhp_panel.Controls.Add(this.dangKyHocPhanUC1);
+            this.dkhp_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dkhp_panel.Location = new System.Drawing.Point(0, 0);
+            this.dkhp_panel.Name = "dkhp_panel";
+            this.dkhp_panel.Size = new System.Drawing.Size(1082, 537);
+            this.dkhp_panel.TabIndex = 1;
             // 
             // dangKyHocPhanUC1
             // 
+            this.dangKyHocPhanUC1.AutoScroll = true;
+            this.dangKyHocPhanUC1.AutoSize = true;
             this.dangKyHocPhanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dangKyHocPhanUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dangKyHocPhanUC1.Location = new System.Drawing.Point(0, 0);
             this.dangKyHocPhanUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dangKyHocPhanUC1.Name = "dangKyHocPhanUC1";
-            this.dangKyHocPhanUC1.Size = new System.Drawing.Size(1529, 528);
+            this.dangKyHocPhanUC1.Size = new System.Drawing.Size(1082, 537);
             this.dangKyHocPhanUC1.TabIndex = 0;
             this.dangKyHocPhanUC1.Visible = false;
             // 
-            // panel1
+            // login_panel
             // 
-            this.panel1.Controls.Add(this.dangKyHocPhanUC1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 53);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1529, 528);
-            this.panel1.TabIndex = 1;
+            this.login_panel.AutoSize = true;
+            this.login_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.login_panel.Controls.Add(this.loginUC1);
+            this.login_panel.Controls.Add(this.dkhp_panel);
+            this.login_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.login_panel.Location = new System.Drawing.Point(0, 44);
+            this.login_panel.Name = "login_panel";
+            this.login_panel.Size = new System.Drawing.Size(1082, 537);
+            this.login_panel.TabIndex = 1;
             // 
-            // panel2
+            // loginUC1
             // 
-            this.panel2.Controls.Add(this.btn_back);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1529, 53);
-            this.panel2.TabIndex = 2;
+            this.loginUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginUC1.Location = new System.Drawing.Point(0, 0);
+            this.loginUC1.Name = "loginUC1";
+            this.loginUC1.Size = new System.Drawing.Size(1082, 537);
+            this.loginUC1.TabIndex = 0;
+            // 
+            // navigator_panel
+            // 
+            this.navigator_panel.AutoSize = true;
+            this.navigator_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.navigator_panel.Controls.Add(this.btn_back);
+            this.navigator_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigator_panel.Location = new System.Drawing.Point(0, 0);
+            this.navigator_panel.Name = "navigator_panel";
+            this.navigator_panel.Size = new System.Drawing.Size(1082, 44);
+            this.navigator_panel.TabIndex = 2;
             // 
             // btn_back
             // 
@@ -78,26 +108,32 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1529, 581);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1082, 581);
+            this.Controls.Add(this.login_panel);
+            this.Controls.Add(this.navigator_panel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1100, 0);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.dkhp_panel.ResumeLayout(false);
+            this.dkhp_panel.PerformLayout();
+            this.login_panel.ResumeLayout(false);
+            this.login_panel.PerformLayout();
+            this.navigator_panel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private DangKyHocPhanUC dangKyHocPhanUC1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel dkhp_panel;
+        private System.Windows.Forms.Panel navigator_panel;
         private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Panel login_panel;
+        private LoginUC loginUC1;
     }
 }

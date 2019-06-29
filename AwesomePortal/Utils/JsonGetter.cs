@@ -23,5 +23,17 @@ namespace AwesomePortal.Utils
             JToken token = a.GetValue(attrName);
             return (int)token;
         }
+        public static bool getBool(string json, string attrName)
+        {
+            JObject a = JObject.Parse(json);
+            JToken token = a.GetValue(attrName);
+            return (bool)token;
+        }
+
+        public static string fromObject(Object o)
+        {
+            JObject ans = JObject.FromObject(o);
+            return ans.ToString();
+        }
     }
 }
