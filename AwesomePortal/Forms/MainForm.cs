@@ -22,6 +22,8 @@ namespace AwesomePortal.Forms
         {
             if (errorCode == 0)
                 ShowDKHP();
+            else
+                MessageBox.Show("Bạn nhập sai MSSV hoặc mật khẩu!");
         }
 
         public void ShowDKHP()
