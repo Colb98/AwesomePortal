@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AwesomePortal.Forms;
+using AwesomePortal.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace AwesomePortal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MainForm());
         }
     }
 }

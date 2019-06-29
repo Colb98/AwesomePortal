@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace AwesomePortal.Models
 {
-    public interface TaiKhoan
+    class Gio
     {
-        bool DangNhap(string username, string password);
-        bool DangXuat();
+        public string gio { get; set; }
     }
 }

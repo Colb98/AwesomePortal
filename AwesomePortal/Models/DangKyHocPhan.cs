@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AwesomePortal
+namespace AwesomePortal.Models
 {
-    class DangKyHocPhan
+    class DangKyHocPhan : Model
     {
-        private Diem diem;
-        private HocPhan hocPhan;
+        public Diem diem { get; set; }
+        public HocPhan hocPhan { get; set; }
     }
 }

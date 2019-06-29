@@ -1,4 +1,4 @@
-﻿namespace AwesomePortal
+﻿namespace AwesomePortal.Models
 {
     public enum ChuongTrinh
     {

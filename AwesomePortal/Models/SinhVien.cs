@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AwesomePortal
+namespace AwesomePortal.Models
 {
     class SinhVien : TaiKhoan
     {
         private static SinhVien instance;
-        private string mssv;
-        private string name;
-        private ChuongTrinh chuongTrinh;
-        private string falcuty;
-        private string khoaTuyen;
-        private List<DangKyHocPhan> dangKyHocPhan;
+        public string mssv { get; set; }
+        public string name { get; set; }
+        public ChuongTrinh chuongTrinh { get; set; }
+        public string falcuty { get; set; }
+        public string khoaTuyen { get; set; }
+        public List<DangKyHocPhan> dangKyHocPhan { get; set; }
 
         private SinhVien()
         {
-
+            dangKyHocPhan = new List<DangKyHocPhan>();
         }
 
         public static SinhVien getInstance()

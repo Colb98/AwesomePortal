@@ -36,8 +36,14 @@
     <Reference Include="BCrypt.Net-Next, Version=3.1.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt.Net-Next.3.1.3\lib\net452\BCrypt.Net-Next.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,25 +55,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChuongTrinh.cs" />
-    <Compile Include="DangKyHocPhan.cs" />
-    <Compile Include="DebugFlag.cs" />
-    <Compile Include="Diem.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Controllers\ListHocPhanCreator.cs" />
+    <Compile Include="Controllers\SinhVienInfo.cs" />
+    <Compile Include="Forms\DangKyHocPhanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DangKyHocPhanUC.Designer.cs">
+      <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocPhan.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="LoginHelper.cs" />
+    <Compile Include="Models\ChuongTrinh.cs" />
+    <Compile Include="Models\DangKyHocPhan.cs" />
+    <Compile Include="Models\Gio.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Utils\Connectors\BaseConnector.cs" />
+    <Compile Include="Utils\DebugFlag.cs" />
+    <Compile Include="Models\Diem.cs" />
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HocPhan.cs" />
+    <Compile Include="Utils\JsonGetter.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Helpers\LoginHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SinhVien.cs" />
-    <Compile Include="TaiKhoan.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Models\SinhVien.cs" />
+    <Compile Include="Models\TaiKhoan.cs" />
+    <EmbeddedResource Include="Forms\DangKyHocPhanUC.resx">
+      <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AwesomePortal
+namespace AwesomePortal.Models
 {
     class Diem
     {
-        public float giuaKy;
-        public float cuoiKy;
+        public float giuaKy { get; set; }
+        public float cuoiKy { get; set; }
 
         public Diem(float gk, float ck)
         {
