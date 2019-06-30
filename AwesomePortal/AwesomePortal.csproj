@@ -64,6 +64,12 @@
     <Compile Include="Forms\DangKyHocPhanUC.Designer.cs">
       <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HomeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeUC.Designer.cs">
+      <DependentUpon>HomeUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,19 +82,19 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThoiKhoaBieuUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ThoiKhoaBieuUC.Designer.cs">
+      <DependentUpon>ThoiKhoaBieuUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ChuongTrinh.cs" />
     <Compile Include="Models\DangKyHocPhan.cs" />
     <Compile Include="Models\Gio.cs" />
-    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\ThoiGian.cs" />
     <Compile Include="Utils\Connectors\BaseConnector.cs" />
     <Compile Include="Utils\DebugFlag.cs" />
     <Compile Include="Models\Diem.cs" />
-    <Compile Include="Forms\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\HocPhan.cs" />
     <Compile Include="Utils\JsonGetter.cs" />
     <Compile Include="Utils\Logger.cs" />
@@ -100,14 +106,17 @@
     <EmbeddedResource Include="Forms\DangKyHocPhanUC.resx">
       <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\HomeUC.resx">
+      <DependentUpon>HomeUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginUC.resx">
       <DependentUpon>LoginUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThoiKhoaBieuUC.resx">
+      <DependentUpon>ThoiKhoaBieuUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

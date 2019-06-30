@@ -34,14 +34,16 @@ namespace AwesomePortal.Controllers
             this.sv = sv;
         }
 
-        public async Task<SinhVienInfo> getInfoAsync()
+        public async Task<SinhVienInfo> getOveralInfo()
         {
             try
             {
                 BaseConnector connector = BaseConnector.getInstance();
                 SinhVienInfo info = new SinhVienInfo();
-                info.nganh = sv.falcuty;
+                info.nganh = sv.faculty;
+                // Lấy năm hiện tại
                 info.nam = JsonGetter.getString((await connector.GetObject("nam")).ToString(), "nam");
+                // Lấy số tín chỉ tối đa
                 info.maxTC = JsonGetter.getString((await connector.GetObject("maxtc")).ToString(), "val");
                 info.curCount = getCurCount(info.nam);
                 return info;
@@ -62,6 +64,21 @@ namespace AwesomePortal.Controllers
                     count++;
             }
             return count.ToString();
+        }
+
+        public async Task<SinhVien> GetSinhVienDetailAsync()
+        {
+            try
+            {
+                BaseConnector connector = BaseConnector.getInstance();
+                sv.GetDataFromObject(await connector.GetObject("sinhvien"));
+                return sv;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Log("ERROR: " + ex);
+                return null;
+            }
         }
     }
 }

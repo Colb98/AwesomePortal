@@ -23,14 +23,25 @@ namespace AwesomePortal.Forms
 
         public void RenderEverything()
         {
+            ClearAllData();
             RenderInfo();
             RenderRegistered();
             RenderRegistable();
             RenderUnRegistable();
         }
+        public void ClearAllData()
+        {
+            label_maxtc.Text = "max_tc";
+            label_nganh.Text = "nganh";
+            label_namhoc.Text = "nam";
+
+            listView1.Clear();
+            listView2.Clear();
+            listView3.Clear();
+        }
         public async void RenderInfo()
         {
-            SinhVienInfo info = await new SinhVienInfoCreator(sinhVien).getInfoAsync();
+            SinhVienInfo info = await new SinhVienInfoCreator(sinhVien).getOveralInfo();
             if (info == null)
             {
                 LogHelper.Log("Can't get info!");

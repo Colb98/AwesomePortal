@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AwesomePortal.Models
 {
-    class Gio
+    public class Gio
     {
         public string gio { get; set; }
     }
