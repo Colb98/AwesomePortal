@@ -75,7 +75,7 @@ namespace AwesomePortal.Forms
             HideAllPanel();
             home_panel.BringToFront();
             home_panel.Show();
-            navigator_panel.Show();
+            navigator_panel.Hide();
             homeUC1.GetSinhVienDetail();
             home_panel.Location = new Point(0, navigator_panel.Height + 10);
         }

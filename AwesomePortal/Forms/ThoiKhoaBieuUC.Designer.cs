@@ -35,6 +35,7 @@
             this.cb_nam = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_ky = new System.Windows.Forms.ComboBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +108,7 @@
             this.cb_nam.Name = "cb_nam";
             this.cb_nam.Size = new System.Drawing.Size(121, 33);
             this.cb_nam.TabIndex = 4;
+            this.cb_nam.TextChanged += new System.EventHandler(this.cb_ky_TextChanged);
             // 
             // label3
             // 
@@ -128,9 +130,18 @@
             this.cb_ky.TabIndex = 4;
             this.cb_ky.TextChanged += new System.EventHandler(this.cb_ky_TextChanged);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(28, 200);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(1100, 23);
+            this.progressBar1.TabIndex = 0;
+            this.progressBar1.Visible = false;
+            // 
             // ThoiKhoaBieuUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.cb_ky);
             this.Controls.Add(this.cb_nam);
             this.Controls.Add(this.label3);
@@ -156,5 +167,6 @@
         private System.Windows.Forms.ComboBox cb_nam;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cb_ky;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

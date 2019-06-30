@@ -15,6 +15,7 @@ namespace AwesomePortal.Forms
     {
         // Năm, kì, thứ, tiết
         private string[,,,] data = new string[99, 4, 8, 13];
+        private Label[,] controls = new Label[8, 13];
         public ThoiKhoaBieuUC()
         {
             InitializeComponent();
@@ -26,7 +27,6 @@ namespace AwesomePortal.Forms
         {
             for(int i=1;i<=3;i++)
                 cb_ky.Items.Add(i);
-            cb_ky.SelectedIndex = 0;
         }
 
         public void SetData(List<HocPhan> hocPhans)
@@ -48,6 +48,7 @@ namespace AwesomePortal.Forms
                         LogHelper.Log("ERROR TKB UC: " + e);
                     }
             }
+            listNam.Sort();
             foreach(int nam in listNam)
             {
                 cb_nam.Items.Add(nam);
@@ -65,17 +66,26 @@ namespace AwesomePortal.Forms
             SetData(arr);
         }
 
-        public void RenderData()
+        public async void RenderData()
+        {
+            RenderDataCell();
+        }
+
+        public void RenderDataCell()
         {
             int nRows = tableLayoutPanel1.RowCount;
             int nCols = tableLayoutPanel1.ColumnCount;
+            if (cb_nam.SelectedIndex < 0)
+                cb_nam.SelectedIndex = 0;
+            if (cb_ky.SelectedIndex < 0)
+                cb_ky.SelectedIndex = 0;
             int nam = Int32.Parse(cb_nam.Text);
             int ky = Int32.Parse(cb_ky.Text);
             for (int row = 1; row < nRows; row++)
             {
                 for (int col = 1; col < nCols; col++)
                 {
-                    SetCellLabel(row, col, data[nam-2000, ky, col, row]);
+                    SetCellLabel(row, col, data[nam - 2000, ky, col, row]);
                 }
             }
         }
@@ -102,7 +112,13 @@ namespace AwesomePortal.Forms
 
         private void SetHeaderCellLabel(int row, int col, string text)
         {
-            Label label = new Label();
+            Label label;
+            if (controls[col, row] != null)
+                label = controls[col, row];
+            else
+                label = new Label();
+            if (text == null)
+                text = "";
             label.Text = text;
             label.TextAlign = ContentAlignment.MiddleCenter;
             label.BackColor = Color.Transparent;
@@ -113,13 +129,29 @@ namespace AwesomePortal.Forms
         }
         private void SetCellLabel(int row, int col, string text)
         {
-            Label label = new Label();
+            Label label;
+            bool create = false;
+            if (controls[col, row] != null)
+                label = controls[col, row];
+            else
+            {
+                create = true;
+                label = new Label();
+            }
+            if (text == null && label.Text == "")
+                return;
+            if (text == null)
+                text = "";
             label.Text = text;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            label.BackColor = Color.Transparent;
-            label.Font = new Font(label.Font.FontFamily, 13f, FontStyle.Regular);
-            label.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Controls.Add(label, col, row);
+            if (create)
+            {
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.BackColor = Color.Transparent;
+                label.Font = new Font(label.Font.FontFamily, 13f, FontStyle.Regular);
+                label.Dock = DockStyle.Fill;
+                controls[col, row] = label;
+                tableLayoutPanel1.Controls.Add(label, col, row);
+            }
         }
 
         private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -141,7 +173,20 @@ namespace AwesomePortal.Forms
 
         private void cb_ky_TextChanged(object sender, EventArgs e)
         {
+            ShowProgressBar();
             RenderData();
+            HideProgressBar();
+        }
+
+        private void ShowProgressBar()
+        {
+            progressBar1.Show();
+            tableLayoutPanel1.Hide();
+        }
+        private void HideProgressBar()
+        {
+            progressBar1.Hide();
+            tableLayoutPanel1.Show();
         }
     }
 }
