@@ -62,46 +62,46 @@
     <Compile Include="Controllers\DangKyHocPhanController.cs" />
     <Compile Include="Controllers\ListHocPhanCreator.cs" />
     <Compile Include="Controllers\SinhVienInfo.cs" />
-    <Compile Include="Forms\DangKyHocPhanUC.cs">
+    <Compile Include="Controllers\Forms\DangKyHocPhanUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\DangKyHocPhanUC.Designer.cs">
+    <Compile Include="Controllers\Forms\DangKyHocPhanUC.Designer.cs">
       <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\HomeUC.cs">
+    <Compile Include="Controllers\Forms\HomeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\HomeUC.Designer.cs">
+    <Compile Include="Controllers\Forms\HomeUC.Designer.cs">
       <DependentUpon>HomeUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KetQuaUC.cs">
+    <Compile Include="Controllers\Forms\KetQuaUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\KetQuaUC.Designer.cs">
+    <Compile Include="Controllers\Forms\KetQuaUC.Designer.cs">
       <DependentUpon>KetQuaUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoadingDialog.cs">
+    <Compile Include="Controllers\Forms\LoadingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoadingDialog.Designer.cs">
+    <Compile Include="Controllers\Forms\LoadingDialog.Designer.cs">
       <DependentUpon>LoadingDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginUC.cs">
+    <Compile Include="Controllers\Forms\LoginUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\LoginUC.Designer.cs">
+    <Compile Include="Controllers\Forms\LoginUC.Designer.cs">
       <DependentUpon>LoginUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForm.cs">
+    <Compile Include="Controllers\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
+    <Compile Include="Controllers\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ThoiKhoaBieuUC.cs">
+    <Compile Include="Controllers\Forms\ThoiKhoaBieuUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\ThoiKhoaBieuUC.Designer.cs">
+    <Compile Include="Controllers\Forms\ThoiKhoaBieuUC.Designer.cs">
       <DependentUpon>ThoiKhoaBieuUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ChuongTrinh.cs" />
@@ -125,25 +125,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
-    <EmbeddedResource Include="Forms\DangKyHocPhanUC.resx">
+    <EmbeddedResource Include="Controllers\Forms\DangKyHocPhanUC.resx">
       <DependentUpon>DangKyHocPhanUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HomeUC.resx">
+    <EmbeddedResource Include="Controllers\Forms\HomeUC.resx">
       <DependentUpon>HomeUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KetQuaUC.resx">
+    <EmbeddedResource Include="Controllers\Forms\KetQuaUC.resx">
       <DependentUpon>KetQuaUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoadingDialog.resx">
+    <EmbeddedResource Include="Controllers\Forms\LoadingDialog.resx">
       <DependentUpon>LoadingDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginUC.resx">
+    <EmbeddedResource Include="Controllers\Forms\LoginUC.resx">
       <DependentUpon>LoginUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForm.resx">
+    <EmbeddedResource Include="Controllers\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ThoiKhoaBieuUC.resx">
+    <EmbeddedResource Include="Controllers\Forms\ThoiKhoaBieuUC.resx">
       <DependentUpon>ThoiKhoaBieuUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,6 +156,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

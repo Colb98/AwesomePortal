@@ -38,6 +38,7 @@ namespace AwesomePortal.Models
                 "Khoá tuyển: " + khoaTuyen;
         }
 
+        // Không dùng hàm này
         public bool DangNhap(string username, string password)
         {
             bool loginSuccess = LoginHelper.login(username, password);

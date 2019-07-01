@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.dkhp_panel = new System.Windows.Forms.Panel();
+            this.dangKyHocPhanUC1 = new AwesomePortal.Forms.DangKyHocPhanUC();
             this.login_panel = new System.Windows.Forms.Panel();
+            this.loginUC1 = new AwesomePortal.Forms.LoginUC();
             this.navigator_panel = new System.Windows.Forms.Panel();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.home_panel = new System.Windows.Forms.Panel();
+            this.homeUC1 = new AwesomePortal.Forms.HomeUC();
             this.tkb_panel = new System.Windows.Forms.Panel();
+            this.thoiKhoaBieuUC1 = new AwesomePortal.Forms.ThoiKhoaBieuUC();
             this.ketqua_panel = new System.Windows.Forms.Panel();
             this.ketQuaUC1 = new AwesomePortal.Forms.KetQuaUC();
-            this.thoiKhoaBieuUC1 = new AwesomePortal.Forms.ThoiKhoaBieuUC();
-            this.homeUC1 = new AwesomePortal.Forms.HomeUC();
-            this.loginUC1 = new AwesomePortal.Forms.LoginUC();
-            this.dangKyHocPhanUC1 = new AwesomePortal.Forms.DangKyHocPhanUC();
-            this.btn_refresh = new System.Windows.Forms.Button();
             this.dkhp_panel.SuspendLayout();
             this.login_panel.SuspendLayout();
             this.navigator_panel.SuspendLayout();
@@ -60,6 +60,18 @@
             this.dkhp_panel.Size = new System.Drawing.Size(1300, 910);
             this.dkhp_panel.TabIndex = 1;
             // 
+            // dangKyHocPhanUC1
+            // 
+            this.dangKyHocPhanUC1.AutoScroll = true;
+            this.dangKyHocPhanUC1.AutoSize = true;
+            this.dangKyHocPhanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dangKyHocPhanUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dangKyHocPhanUC1.Location = new System.Drawing.Point(0, 0);
+            this.dangKyHocPhanUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dangKyHocPhanUC1.Name = "dangKyHocPhanUC1";
+            this.dangKyHocPhanUC1.Size = new System.Drawing.Size(1300, 910);
+            this.dangKyHocPhanUC1.TabIndex = 0;
+            // 
             // login_panel
             // 
             this.login_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -68,6 +80,15 @@
             this.login_panel.Name = "login_panel";
             this.login_panel.Size = new System.Drawing.Size(805, 537);
             this.login_panel.TabIndex = 1;
+            // 
+            // loginUC1
+            // 
+            this.loginUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginUC1.Location = new System.Drawing.Point(0, 0);
+            this.loginUC1.Name = "loginUC1";
+            this.loginUC1.Size = new System.Drawing.Size(805, 537);
+            this.loginUC1.TabIndex = 0;
             // 
             // navigator_panel
             // 
@@ -79,6 +100,16 @@
             this.navigator_panel.Name = "navigator_panel";
             this.navigator_panel.Size = new System.Drawing.Size(204, 44);
             this.navigator_panel.TabIndex = 2;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(105, 3);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(96, 38);
+            this.btn_refresh.TabIndex = 1;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // btn_back
             // 
@@ -100,6 +131,16 @@
             this.home_panel.Size = new System.Drawing.Size(940, 363);
             this.home_panel.TabIndex = 3;
             // 
+            // homeUC1
+            // 
+            this.homeUC1.AutoSize = true;
+            this.homeUC1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.homeUC1.Location = new System.Drawing.Point(0, 0);
+            this.homeUC1.Margin = new System.Windows.Forms.Padding(0);
+            this.homeUC1.Name = "homeUC1";
+            this.homeUC1.Size = new System.Drawing.Size(940, 363);
+            this.homeUC1.TabIndex = 0;
+            // 
             // tkb_panel
             // 
             this.tkb_panel.AutoSize = true;
@@ -109,6 +150,15 @@
             this.tkb_panel.Name = "tkb_panel";
             this.tkb_panel.Size = new System.Drawing.Size(1158, 626);
             this.tkb_panel.TabIndex = 4;
+            // 
+            // thoiKhoaBieuUC1
+            // 
+            this.thoiKhoaBieuUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thoiKhoaBieuUC1.Location = new System.Drawing.Point(4, 4);
+            this.thoiKhoaBieuUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.thoiKhoaBieuUC1.Name = "thoiKhoaBieuUC1";
+            this.thoiKhoaBieuUC1.Size = new System.Drawing.Size(1150, 617);
+            this.thoiKhoaBieuUC1.TabIndex = 0;
             // 
             // ketqua_panel
             // 
@@ -131,56 +181,6 @@
             this.ketQuaUC1.Size = new System.Drawing.Size(1187, 632);
             this.ketQuaUC1.TabIndex = 0;
             // 
-            // thoiKhoaBieuUC1
-            // 
-            this.thoiKhoaBieuUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thoiKhoaBieuUC1.Location = new System.Drawing.Point(4, 4);
-            this.thoiKhoaBieuUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.thoiKhoaBieuUC1.Name = "thoiKhoaBieuUC1";
-            this.thoiKhoaBieuUC1.Size = new System.Drawing.Size(1150, 617);
-            this.thoiKhoaBieuUC1.TabIndex = 0;
-            // 
-            // homeUC1
-            // 
-            this.homeUC1.AutoSize = true;
-            this.homeUC1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.homeUC1.Location = new System.Drawing.Point(0, 0);
-            this.homeUC1.Margin = new System.Windows.Forms.Padding(0);
-            this.homeUC1.Name = "homeUC1";
-            this.homeUC1.Size = new System.Drawing.Size(940, 363);
-            this.homeUC1.TabIndex = 0;
-            // 
-            // loginUC1
-            // 
-            this.loginUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginUC1.Location = new System.Drawing.Point(0, 0);
-            this.loginUC1.Name = "loginUC1";
-            this.loginUC1.Size = new System.Drawing.Size(805, 537);
-            this.loginUC1.TabIndex = 0;
-            // 
-            // dangKyHocPhanUC1
-            // 
-            this.dangKyHocPhanUC1.AutoScroll = true;
-            this.dangKyHocPhanUC1.AutoSize = true;
-            this.dangKyHocPhanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dangKyHocPhanUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dangKyHocPhanUC1.Location = new System.Drawing.Point(0, 0);
-            this.dangKyHocPhanUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dangKyHocPhanUC1.Name = "dangKyHocPhanUC1";
-            this.dangKyHocPhanUC1.Size = new System.Drawing.Size(1300, 910);
-            this.dangKyHocPhanUC1.TabIndex = 0;
-            // 
-            // btn_refresh
-            // 
-            this.btn_refresh.Location = new System.Drawing.Point(105, 3);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(96, 38);
-            this.btn_refresh.TabIndex = 1;
-            this.btn_refresh.Text = "Refresh";
-            this.btn_refresh.UseVisualStyleBackColor = true;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -198,7 +198,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1700, 700);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "(Not very) Awesome Portal!!";
             this.dkhp_panel.ResumeLayout(false);
             this.dkhp_panel.PerformLayout();
             this.login_panel.ResumeLayout(false);

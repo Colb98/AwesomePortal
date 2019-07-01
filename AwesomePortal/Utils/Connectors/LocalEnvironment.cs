@@ -8,19 +8,9 @@ namespace AwesomePortal.Utils.Connectors
 {
     class LocalEnvironment : DeployEnvironment
     {
-        public override string GetCancelPath()
+        public override string GetURL()
         {
-            return "cancel";
-        }
-
-        public override string GetEnrolablePath()
-        {
-            return "listmonchuadk";
-        }
-
-        public override string GetEnrolPath()
-        {
-            return "enrol";
+            return "http://localhost:3000/";
         }
 
         public override string GetLoginPath()
@@ -32,10 +22,14 @@ namespace AwesomePortal.Utils.Connectors
         {
             return "sinhvien";
         }
-
         public override string GetTryEnrolPath()
         {
             return "listmon";
+        }
+
+        public override string GetEnrolablePath()
+        {
+            return "listmonchuadk";
         }
 
         public override string GetUnEnrolablePath()
@@ -43,9 +37,14 @@ namespace AwesomePortal.Utils.Connectors
             return "listmonkhongthedk";
         }
 
-        public override string GetURL()
+        public override string GetCancelPath()
         {
-            return "http://localhost:3000/";
+            return "cancel";
+        }
+
+        public override string GetEnrolPath()
+        {
+            return "enrol";
         }
     }
 }

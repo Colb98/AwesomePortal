@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AwesomePortal.API.Request.AuthRequest" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAA=</HashCode>
+      <FileName>API\Request\AuthRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.API.Request.RequestEnrolOrCancel" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Request\RequestEnrolOrCancel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.API.Response.BaseResponse" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Response\BaseResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Controllers.AuthChecker" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\AuthChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Controllers.DangKyHocPhanController" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABECAAAAgAAAAAAgIAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Controllers\DangKyHocPhanController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Controllers.ListHocPhanCreator" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAEAAAAAAABAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ListHocPhanCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Controllers.SinhVienInfo" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAAAAAAAACEAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SinhVienInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Controllers.SinhVienInfoCreator" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEABAAAAAAAAAAAAAAAAAAAIQAA=</HashCode>
+      <FileName>Controllers\SinhVienInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.DangKyHocPhanUC" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQQAEGAAmAAAhCAAACEAgACQKAAAAAAACQgAYCABAE=</HashCode>
+      <FileName>Controllers\Forms\DangKyHocPhanUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.HomeUC" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAAAAAgAACAAAACAAA5AAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Controllers\Forms\HomeUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.KetQuaUC" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAAARACAAABAAAACAAAgGAAAAAAAAAAAQAYAABQQ=</HashCode>
+      <FileName>Controllers\Forms\KetQuaUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.LoadingDialog" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Forms\LoadingDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.LoginUC" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAAACAAAACAAAIAAAEEEAAAQAAAAA=</HashCode>
+      <FileName>Controllers\Forms\LoginUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.MainForm" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAAAAAACAMURAQgCCAAkACBUEAAAABABQAAAEAEAA=</HashCode>
+      <FileName>Controllers\Forms\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Forms.ThoiKhoaBieuUC" Collapsed="true">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAARSCAAABAAAADAAAgGQAAAACoAAAAQAQAAACQ=</HashCode>
+      <FileName>Controllers\Forms\ThoiKhoaBieuUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.LoginHelper" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Helpers\LoginHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Program" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.DebugFlag" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\DebugFlag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.LogBase" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Utils\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.FileLogger" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.EventLogger" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.LogHelper" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Models.DangKyHocPhan" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DangKyHocPhan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Models.Diem" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Diem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Models.Gio" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Gio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Models.HocPhan" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABggAAAgAAAAAAEAAAACAAgAAAQASEAAAAIAAAAAkA=</HashCode>
+      <FileName>Models\HocPhan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Models.SinhVien" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAigAAAAQCEAAAAAAAAAEBEAAUAAIAQAAAAAgA=</HashCode>
+      <FileName>Models\SinhVien.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AwesomePortal.Models.ThoiGian" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAABAAAAAAAAAAAQAABAAAAAAAAA=</HashCode>
+      <FileName>Models\ThoiGian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Properties.Resources" Collapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Properties.Settings" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.Connectors.BaseConnector" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAIAAIAAAAAAQAAAAAABAoAQQAAAABAAAAEA=</HashCode>
+      <FileName>Utils\Connectors\BaseConnector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.Connectors.DeployEnvironment" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAKAAgAAAAAAAAAAAIAAAAAIgAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Connectors\DeployEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.Connectors.LocalEnvironment" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAKAAgAAAAAAAAAAAIAAAAAIgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Connectors\LocalEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.JsonAttributeGetter" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\JsonAttributeGetter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.JsonAttributes" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAYAAEAAAgQAABAAgAADICQCAgmIIwhABCCAA=</HashCode>
+      <FileName>Utils\JsonAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.JsonAttributesLive" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAYAAEAAAgQAABAAgAADICQCAgmIIwhABCCAA=</HashCode>
+      <FileName>Utils\JsonAttributesLive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.JsonGetter" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAgAAAAAAgACAAAAIAAAQAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Utils\JsonGetter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomePortal.Utils.LocalOrPublic" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Utils\LocalOrPublic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AwesomePortal.Models.TaiKhoan" Collapsed="true">
+    <Position X="6" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\TaiKhoan.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AwesomePortal.LogTarget" Collapsed="true">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AwesomePortal.Models.ChuongTrinh" Collapsed="true">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAEAAAAAAgA=</HashCode>
+      <FileName>Models\ChuongTrinh.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
