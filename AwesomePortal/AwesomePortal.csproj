@@ -55,7 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Request\AuthRequest.cs" />
+    <Compile Include="API\Request\RequestEnrolOrCancel.cs" />
+    <Compile Include="API\Response\BaseResponse.cs" />
     <Compile Include="Controllers\AuthChecker.cs" />
+    <Compile Include="Controllers\DangKyHocPhanController.cs" />
     <Compile Include="Controllers\ListHocPhanCreator.cs" />
     <Compile Include="Controllers\SinhVienInfo.cs" />
     <Compile Include="Forms\DangKyHocPhanUC.cs">
@@ -69,6 +73,12 @@
     </Compile>
     <Compile Include="Forms\HomeUC.Designer.cs">
       <DependentUpon>HomeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KetQuaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\KetQuaUC.Designer.cs">
+      <DependentUpon>KetQuaUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoadingDialog.cs">
       <SubType>Form</SubType>
@@ -99,10 +109,16 @@
     <Compile Include="Models\Gio.cs" />
     <Compile Include="Models\ThoiGian.cs" />
     <Compile Include="Utils\Connectors\BaseConnector.cs" />
+    <Compile Include="Utils\Connectors\DeployEnvironment.cs" />
+    <Compile Include="Utils\Connectors\LocalEnvironment.cs" />
     <Compile Include="Utils\DebugFlag.cs" />
     <Compile Include="Models\Diem.cs" />
     <Compile Include="Models\HocPhan.cs" />
+    <Compile Include="Utils\JsonAttributeGetter.cs" />
+    <Compile Include="Utils\JsonAttributes.cs" />
+    <Compile Include="Utils\JsonAttributesLive.cs" />
     <Compile Include="Utils\JsonGetter.cs" />
+    <Compile Include="Utils\LocalOrPublic.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Helpers\LoginHelper.cs" />
     <Compile Include="Program.cs" />
@@ -114,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomeUC.resx">
       <DependentUpon>HomeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KetQuaUC.resx">
+      <DependentUpon>KetQuaUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoadingDialog.resx">
       <DependentUpon>LoadingDialog.cs</DependentUpon>
@@ -136,6 +155,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

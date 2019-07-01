@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AwesomePortal.Controllers;
+using AwesomePortal.Models;
 
 namespace AwesomePortal.Forms
 {
@@ -26,6 +27,7 @@ namespace AwesomePortal.Forms
             string username = textBox1.Text;
             string password = textBox2.Text;
             bool auth = await AuthChecker.sendAuth(username, password);
+            SinhVien.getInstance().mssv = username;
             // Raise an event
             if (auth)
                 OnLoginSuccess(0);

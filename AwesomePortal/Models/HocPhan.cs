@@ -14,6 +14,7 @@ namespace AwesomePortal.Models
 
         }
 
+        public int id { get; set; }
         public string maHocPhan { get; set; }
         public string tenHocPhan { get; set; }
         public int soTinChi { get; set; }
@@ -22,22 +23,30 @@ namespace AwesomePortal.Models
         public List<HocPhan> hocPhanTienQuyet { get; set; }
         public ChuongTrinh chuongTrinh { get; set; }
         public string faculty { get; set; }
+        public int nam { get; set; }
         public string namHoc { get; set; }
         public int hocKy { get; set; }
+        public string lop { get; set; }
         public ThoiGian thoiGian { get; set; }
 
         public static HocPhan Parse(Object jsonObject)
         {
             string json = jsonObject.ToString();
             HocPhan ans = new HocPhan();
-            ans.maHocPhan = JsonGetter.getString(json, "maHP");
-            ans.tenHocPhan = JsonGetter.getString(json, "tenHP");
-            ans.namHoc = JsonGetter.getString(json, "namHoc");
-            ans.maxSV = JsonGetter.getInt(json, "maxSV");
-            ans.daDK = JsonGetter.getInt(json, "dkSV");
-            ans.soTinChi = JsonGetter.getInt(json, "soTC");
-            ans.hocKy = JsonGetter.getInt(json, "hocKy");
+            JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+
+            ans.id = JsonGetter.getInt(json, jsonAttr.HP_ID());
+            ans.maHocPhan = JsonGetter.getString(json, jsonAttr.HP_MA());
+            ans.tenHocPhan = JsonGetter.getString(json, jsonAttr.HP_TEN());
+            ans.nam = JsonGetter.getInt(json, jsonAttr.HP_NAM());
+            ans.maxSV = JsonGetter.getInt(json, jsonAttr.HP_MAXSV());
+            ans.daDK = JsonGetter.getInt(json, jsonAttr.HP_DK());
+            ans.soTinChi = JsonGetter.getInt(json, jsonAttr.HP_SOTC());
+            ans.hocKy = JsonGetter.getInt(json, jsonAttr.HP_HOCKY());
+            ans.lop = JsonGetter.getString(json, jsonAttr.HP_LOP());
             ans.thoiGian = ThoiGian.Parse(jsonObject);
+
+            ans.namHoc = ans.nam.ToString() + " - " + (ans.nam + 1).ToString();
 
             return ans;
         }

@@ -10,11 +10,13 @@ namespace AwesomePortal.Models
     public class SinhVien : TaiKhoan
     {
         private static SinhVien instance;
+        public int id { get; set; }
         public string mssv { get; set; }
         public string name { get; set; }
         public string chuongTrinh { get; set; }
         public string faculty { get; set; }
         public string khoaTuyen { get; set; }
+        public int maxTC { get; set; }
         public List<DangKyHocPhan> dangKyHocPhan { get; set; }
 
         private SinhVien()
@@ -60,12 +62,16 @@ namespace AwesomePortal.Models
         // Parse and copy from object
         public void GetDataFromObject(Object o)
         {
-            this.mssv = JsonGetter.getString(o.ToString(), "mssv");
-            this.name = JsonGetter.getString(o.ToString(), "name");
-            this.chuongTrinh = JsonGetter.getString(o.ToString(), "program");
-            this.faculty = JsonGetter.getString(o.ToString(), "fal");
-            this.khoaTuyen = JsonGetter.getString(o.ToString(), "year");
-            this.dangKyHocPhan = DangKyHocPhan.ParseArray(JsonGetter.getList(o.ToString(), "dkhp"));
+            JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+            Object data = JsonGetter.getObject(o.ToString(), jsonAttr.SV());
+            this.id = JsonGetter.getInt(data.ToString(), jsonAttr.SV_ID());
+            this.mssv = JsonGetter.getString(data.ToString(), jsonAttr.SV_MSSV());
+            this.name = JsonGetter.getString(data.ToString(), jsonAttr.SV_TEN());
+            this.chuongTrinh = JsonGetter.getString(data.ToString(), jsonAttr.SV_CHUONGTRINH());
+            this.faculty = JsonGetter.getString(data.ToString(), jsonAttr.SV_KHOA());
+            this.khoaTuyen = JsonGetter.getString(data.ToString(), jsonAttr.SV_KHOATUYEN());
+            this.maxTC = JsonGetter.getInt(data.ToString(), jsonAttr.SV_MAXTC());
+            this.dangKyHocPhan = DangKyHocPhan.ParseArray(JsonGetter.getList(o.ToString(), jsonAttr.SV_DKHP()));
         }
     }
 }

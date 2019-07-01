@@ -83,6 +83,8 @@ namespace AwesomePortal.Utils
             {
                 JObject a = JObject.Parse(json);
                 JToken token = a.GetValue(attrName);
+                if (token == null || token.Type == JTokenType.Null)
+                    return new List<object>();
                 JArray array = (JArray)token;
                 return new List<object>(array);
             }

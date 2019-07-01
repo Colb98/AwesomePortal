@@ -35,15 +35,18 @@
             this.home_panel = new System.Windows.Forms.Panel();
             this.tkb_panel = new System.Windows.Forms.Panel();
             this.ketqua_panel = new System.Windows.Forms.Panel();
+            this.ketQuaUC1 = new AwesomePortal.Forms.KetQuaUC();
             this.thoiKhoaBieuUC1 = new AwesomePortal.Forms.ThoiKhoaBieuUC();
             this.homeUC1 = new AwesomePortal.Forms.HomeUC();
             this.loginUC1 = new AwesomePortal.Forms.LoginUC();
             this.dangKyHocPhanUC1 = new AwesomePortal.Forms.DangKyHocPhanUC();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.dkhp_panel.SuspendLayout();
             this.login_panel.SuspendLayout();
             this.navigator_panel.SuspendLayout();
             this.home_panel.SuspendLayout();
             this.tkb_panel.SuspendLayout();
+            this.ketqua_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dkhp_panel
@@ -54,7 +57,7 @@
             this.dkhp_panel.Location = new System.Drawing.Point(50, 50);
             this.dkhp_panel.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.dkhp_panel.Name = "dkhp_panel";
-            this.dkhp_panel.Size = new System.Drawing.Size(1300, 820);
+            this.dkhp_panel.Size = new System.Drawing.Size(1300, 910);
             this.dkhp_panel.TabIndex = 1;
             // 
             // login_panel
@@ -70,10 +73,11 @@
             // 
             this.navigator_panel.AutoSize = true;
             this.navigator_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.navigator_panel.Controls.Add(this.btn_refresh);
             this.navigator_panel.Controls.Add(this.btn_back);
             this.navigator_panel.Location = new System.Drawing.Point(0, 0);
             this.navigator_panel.Name = "navigator_panel";
-            this.navigator_panel.Size = new System.Drawing.Size(102, 44);
+            this.navigator_panel.Size = new System.Drawing.Size(204, 44);
             this.navigator_panel.TabIndex = 2;
             // 
             // btn_back
@@ -108,11 +112,24 @@
             // 
             // ketqua_panel
             // 
+            this.ketqua_panel.AutoSize = true;
+            this.ketqua_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ketqua_panel.Controls.Add(this.ketQuaUC1);
             this.ketqua_panel.Location = new System.Drawing.Point(50, 50);
             this.ketqua_panel.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.ketqua_panel.Name = "ketqua_panel";
-            this.ketqua_panel.Size = new System.Drawing.Size(455, 339);
+            this.ketqua_panel.Size = new System.Drawing.Size(1194, 639);
             this.ketqua_panel.TabIndex = 5;
+            // 
+            // ketQuaUC1
+            // 
+            this.ketQuaUC1.AutoSize = true;
+            this.ketQuaUC1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ketQuaUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ketQuaUC1.Location = new System.Drawing.Point(4, 4);
+            this.ketQuaUC1.Name = "ketQuaUC1";
+            this.ketQuaUC1.Size = new System.Drawing.Size(1187, 632);
+            this.ketQuaUC1.TabIndex = 0;
             // 
             // thoiKhoaBieuUC1
             // 
@@ -151,8 +168,18 @@
             this.dangKyHocPhanUC1.Location = new System.Drawing.Point(0, 0);
             this.dangKyHocPhanUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dangKyHocPhanUC1.Name = "dangKyHocPhanUC1";
-            this.dangKyHocPhanUC1.Size = new System.Drawing.Size(1300, 820);
+            this.dangKyHocPhanUC1.Size = new System.Drawing.Size(1300, 910);
             this.dangKyHocPhanUC1.TabIndex = 0;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(105, 3);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(96, 38);
+            this.btn_refresh.TabIndex = 1;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // MainForm
             // 
@@ -160,13 +187,13 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1166, 653);
+            this.ClientSize = new System.Drawing.Size(1229, 653);
+            this.Controls.Add(this.navigator_panel);
             this.Controls.Add(this.ketqua_panel);
             this.Controls.Add(this.tkb_panel);
             this.Controls.Add(this.home_panel);
             this.Controls.Add(this.login_panel);
             this.Controls.Add(this.dkhp_panel);
-            this.Controls.Add(this.navigator_panel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1700, 700);
@@ -179,6 +206,8 @@
             this.home_panel.ResumeLayout(false);
             this.home_panel.PerformLayout();
             this.tkb_panel.ResumeLayout(false);
+            this.ketqua_panel.ResumeLayout(false);
+            this.ketqua_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +226,7 @@
         private System.Windows.Forms.Panel tkb_panel;
         private ThoiKhoaBieuUC thoiKhoaBieuUC1;
         private System.Windows.Forms.Panel ketqua_panel;
+        private KetQuaUC ketQuaUC1;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

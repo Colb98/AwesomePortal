@@ -23,8 +23,9 @@ namespace AwesomePortal.Models
         public static DangKyHocPhan Parse(Object o)
         {
             DangKyHocPhan ans = new DangKyHocPhan();
-            ans.diem = Diem.Parse(JsonGetter.getObject(o.ToString(), "diem"));
-            ans.hocPhan = HocPhan.Parse(JsonGetter.getObject(o.ToString(), "hocphan"));
+            JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+            ans.diem = Diem.Parse(JsonGetter.getObject(o.ToString(), jsonAttr.DKHP_D()));
+            ans.hocPhan = HocPhan.Parse(JsonGetter.getObject(o.ToString(), jsonAttr.DKHP_HP()));
             return ans;
         }
     }

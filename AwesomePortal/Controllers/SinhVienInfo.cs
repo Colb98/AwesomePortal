@@ -1,4 +1,5 @@
-﻿using AwesomePortal.Models;
+﻿using AwesomePortal.API.Response;
+using AwesomePortal.Models;
 using AwesomePortal.Utils;
 using AwesomePortal.Utils.Connectors;
 using System;
@@ -42,9 +43,11 @@ namespace AwesomePortal.Controllers
                 SinhVienInfo info = new SinhVienInfo();
                 info.nganh = sv.faculty;
                 // Lấy năm hiện tại
-                info.nam = JsonGetter.getString((await connector.GetObject("nam")).ToString(), "nam");
-                // Lấy số tín chỉ tối đa
-                info.maxTC = JsonGetter.getString((await connector.GetObject("maxtc")).ToString(), "val");
+                //BaseResponse res1 = await connector.GetObject("nam");
+                //if(res1.status)
+                //    info.nam = JsonGetter.getString(res1.obj.ToString(), "nam");
+                //info.nam = "2019 - 2020";
+
                 info.curCount = getCurCount(info.nam);
                 return info;
             }
@@ -71,7 +74,7 @@ namespace AwesomePortal.Controllers
             try
             {
                 BaseConnector connector = BaseConnector.getInstance();
-                sv.GetDataFromObject(await connector.GetObject("sinhvien"));
+                sv.GetDataFromObject((await connector.GetObject(DeployEnvironment.GetEnvironment().GetStudentInfoPath(sv.mssv))).obj);
                 return sv;
             }
             catch (Exception ex)

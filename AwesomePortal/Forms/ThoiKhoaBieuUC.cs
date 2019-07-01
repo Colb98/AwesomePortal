@@ -31,6 +31,7 @@ namespace AwesomePortal.Forms
 
         public void SetData(List<HocPhan> hocPhans)
         {
+            cb_nam.Items.Clear();
             List<int> listNam = new List<int>();
             foreach(HocPhan h in hocPhans)
             {
@@ -49,11 +50,13 @@ namespace AwesomePortal.Forms
                     }
             }
             listNam.Sort();
+            listNam.Reverse();
             foreach(int nam in listNam)
             {
                 cb_nam.Items.Add(nam);
             }
-            cb_nam.SelectedIndex = 0;
+            if(cb_nam.Items.Count > 0)
+                cb_nam.SelectedIndex = 0;
         }
 
         public void SetData(List<DangKyHocPhan> dangKyHocPhans)
@@ -75,9 +78,11 @@ namespace AwesomePortal.Forms
         {
             int nRows = tableLayoutPanel1.RowCount;
             int nCols = tableLayoutPanel1.ColumnCount;
-            if (cb_nam.SelectedIndex < 0)
+            if (cb_nam.Items.Count == 0 || cb_ky.Items.Count == 0)
+                return;
+            if (cb_nam.SelectedIndex < 0 && cb_nam.Items.Count > 0)
                 cb_nam.SelectedIndex = 0;
-            if (cb_ky.SelectedIndex < 0)
+            if (cb_ky.SelectedIndex < 0 && cb_nam.Items.Count > 0)
                 cb_ky.SelectedIndex = 0;
             int nam = Int32.Parse(cb_nam.Text);
             int ky = Int32.Parse(cb_ky.Text);

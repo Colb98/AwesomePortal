@@ -1,4 +1,5 @@
-﻿using AwesomePortal.Models;
+﻿using AwesomePortal.API.Response;
+using AwesomePortal.Models;
 using AwesomePortal.Utils;
 using AwesomePortal.Utils.Connectors;
 using System;
@@ -35,10 +36,15 @@ namespace AwesomePortal.Controllers
             {
                 List<HocPhan> listHocPhan = new List<HocPhan>();
                 BaseConnector connector = BaseConnector.getInstance();
-                List<Object> listO = await connector.GetListObject("listmon");
-                for(int i = 0; i < listO.Count; i++)
+                BaseResponse res = await connector.GetObject(DeployEnvironment.GetEnvironment().GetTryEnrolPath());
+                if (res.status)
                 {
-                    listHocPhan.Add(HocPhan.Parse(listO[i]));
+                    JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+                    List<Object> listO = JsonGetter.getList(res.obj.ToString(), jsonAttr.RES_RESULT());
+                    for (int i = 0; i < listO.Count; i++)
+                    {
+                        listHocPhan.Add(HocPhan.Parse(JsonGetter.getObject(listO[i].ToString(), jsonAttr.RES_SUBJECT())));
+                    }
                 }
                 return listHocPhan;
             }
@@ -55,10 +61,15 @@ namespace AwesomePortal.Controllers
             {
                 List<HocPhan> listHocPhan = new List<HocPhan>();
                 BaseConnector connector = BaseConnector.getInstance();
-                List<Object> listO = await connector.GetListObject("listmonchuadk");
-                for (int i = 0; i < listO.Count; i++)
+                BaseResponse res = await connector.GetObject(DeployEnvironment.GetEnvironment().GetEnrolablePath());
+                if (res.status)
                 {
-                    listHocPhan.Add(HocPhan.Parse(listO[i]));
+                    JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+                    List<Object> listO = JsonGetter.getList(res.obj.ToString(), jsonAttr.RES_RESULT());
+                    for (int i = 0; i < listO.Count; i++)
+                    {
+                        listHocPhan.Add(HocPhan.Parse(JsonGetter.getObject(listO[i].ToString(), jsonAttr.RES_SUBJECT())));
+                    }
                 }
                 return listHocPhan;
             }
@@ -75,15 +86,20 @@ namespace AwesomePortal.Controllers
             {
                 List<HocPhanExtend> listHocPhan = new List<HocPhanExtend>();
                 BaseConnector connector = BaseConnector.getInstance();
-                List<Object> listO = await connector.GetListObject("listmonkhongthedk");
-                for (int i = 0; i < listO.Count; i++)
+                BaseResponse res = await connector.GetObject(DeployEnvironment.GetEnvironment().GetUnEnrolablePath());
+                if (res.status)
                 {
-                    HocPhanExtend hocPhan = new HocPhanExtend()
+                    JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+                    List<Object> listO = JsonGetter.getList(res.obj.ToString(), jsonAttr.RES_RESULT());
+                    for (int i = 0; i < listO.Count; i++)
                     {
-                        hocPhan = HocPhan.Parse(listO[i]),
-                        lyDo = JsonGetter.getString(listO[i].ToString(), "lyDo")
-                    };
-                    listHocPhan.Add(hocPhan);
+                        HocPhanExtend hocPhan = new HocPhanExtend()
+                        {
+                            hocPhan = HocPhan.Parse(JsonGetter.getObject(listO[i].ToString(), jsonAttr.RES_SUBJECT())),
+                            lyDo = JsonGetter.getString(listO[i].ToString(), jsonAttr.RES_REASON())
+                        };
+                        listHocPhan.Add(hocPhan);
+                    }
                 }
                 return listHocPhan;
             }

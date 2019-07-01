@@ -1,4 +1,5 @@
-﻿using AwesomePortal.Models;
+﻿using AwesomePortal.API.Response;
+using AwesomePortal.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace AwesomePortal.Utils.Connectors
         {
             SetUpClient();
         }
+
 
         public static BaseConnector getInstance()
         {
@@ -76,13 +78,14 @@ namespace AwesomePortal.Utils.Connectors
         }
 
         // Samples
-        public async Task<Object> GetObject(string path)
+        public async Task<BaseResponse> GetObject(string path)
         {
             try
             {
                 // Get the product
                 Object o = await GetObjectAsync(path);
-                return o;
+                BaseResponse res = BaseResponse.Parse(o);
+                return res;
             }
             catch (Exception e)
             {
@@ -91,13 +94,14 @@ namespace AwesomePortal.Utils.Connectors
             return null;
         }
 
-        public async Task<Object> PostObject(string path, Object o)
+        public async Task<BaseResponse> PostObject(string path, Object o)
         {
             try
             {
                 // Get the product
                 Object ans = await PostObjectAsync(path, o);
-                return ans;
+                BaseResponse res = BaseResponse.Parse(ans);
+                return res;
             }
             catch (Exception e)
             {
@@ -106,13 +110,14 @@ namespace AwesomePortal.Utils.Connectors
             return null;
         }
 
-        public async Task<List<Object>> GetListObject(string path)
+        public async Task<BaseResponse> GetListObject(string path)
         {
             try
             {
                 // Get the product
-                List<Object> o = await GetListObjectAsync(path);
-                return o;
+                Object o = await GetListObjectAsync(path);
+                BaseResponse res = BaseResponse.Parse(o);
+                return res;
             }
             catch (Exception e)
             {
@@ -125,7 +130,7 @@ namespace AwesomePortal.Utils.Connectors
         protected static void SetUpClient()
         {
             // Update port # in the following line.
-            client.BaseAddress = new Uri("http://localhost:3000/");
+            client.BaseAddress = new Uri(DeployEnvironment.GetEnvironment().GetURL());
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
               new MediaTypeWithQualityHeaderValue("application/json"));

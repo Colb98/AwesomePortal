@@ -1,4 +1,6 @@
-﻿using AwesomePortal.Utils;
+﻿using AwesomePortal.API.Request;
+using AwesomePortal.API.Response;
+using AwesomePortal.Utils;
 using AwesomePortal.Utils.Connectors;
 using System;
 using System.Collections.Generic;
@@ -10,16 +12,11 @@ namespace AwesomePortal.Controllers
 {
     class AuthChecker
     {
-        class AuthRequest
-        {
-            public string mssv { get; set; }
-            public string password { get; set; }
-        }
         public static async Task<bool> sendAuth(string un, string pw)
         {
             BaseConnector connector = BaseConnector.getInstance();
-            Object response = await connector.PostObject("/api/auth/login", new AuthRequest() { mssv = un, password = pw });
-            return JsonGetter.getBool(response.ToString(), "status");
+            BaseResponse res = await connector.PostObject(DeployEnvironment.GetEnvironment().GetLoginPath(), new AuthRequest() { mssv = un, password = pw });
+            return res.status;
         }
     }
 }

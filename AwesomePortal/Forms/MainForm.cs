@@ -17,8 +17,7 @@ namespace AwesomePortal.Forms
         {
             InitializeComponent();
             HideAllPanel();
-            ShowLogin();
-            
+            ShowLogin();            
             
             loginUC1.OnLoginSuccess += LoginUC1_OnLoginSuccess;
             homeUC1.OnClickButtonNavigate += HomeUC1_OnClickButtonNavigate;
@@ -35,7 +34,7 @@ namespace AwesomePortal.Forms
                     ShowTKB();
                     break;
                 case "kq":
-                    //ShowKQ();
+                    ShowKetQua();
                     break;
                 default:
                     break;
@@ -47,6 +46,7 @@ namespace AwesomePortal.Forms
             if (errorCode == 0)
             {
                 ShowHome();
+                DesktopLocation = new Point(50, 50);
             }
             else
                 MessageBox.Show("Bạn nhập sai MSSV hoặc mật khẩu!");
@@ -58,7 +58,9 @@ namespace AwesomePortal.Forms
             home_panel.Hide();
             login_panel.Hide();
             tkb_panel.Hide();
+            ketqua_panel.Hide();
             navigator_panel.Hide();
+            btn_refresh.Hide();
         }
         public void ShowDKHP()
         {
@@ -66,6 +68,7 @@ namespace AwesomePortal.Forms
             dkhp_panel.BringToFront();
             dkhp_panel.Show();
             navigator_panel.Show();
+            btn_refresh.Show();
             dangKyHocPhanUC1.RenderEverything();
             dkhp_panel.Location = new Point(0, navigator_panel.Height + 10);
         }
@@ -77,7 +80,7 @@ namespace AwesomePortal.Forms
             home_panel.Show();
             navigator_panel.Hide();
             homeUC1.GetSinhVienDetail();
-            home_panel.Location = new Point(0, navigator_panel.Height + 10);
+            home_panel.Location = new Point(0, 0);
         }
 
         public void ShowLogin()
@@ -111,9 +114,27 @@ namespace AwesomePortal.Forms
 
         public void ShowTKB() => ShowTKB(SinhVien.getInstance().dangKyHocPhan);
 
+        public void ShowKetQua() => ShowKetQua(SinhVien.getInstance().dangKyHocPhan);
+
+        public void ShowKetQua(List<DangKyHocPhan> data)
+        {
+            HideAllPanel();
+            ketqua_panel.BringToFront();
+            ketqua_panel.Show();
+            ketQuaUC1.SetData(data);
+            ketQuaUC1.RenderData();
+            navigator_panel.Show();
+            ketqua_panel.Location = new Point(0, navigator_panel.Height + 10);
+        }
+
         private void btn_back_Click(object sender, EventArgs e)
         {
             ShowHome();
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            ShowDKHP();
         }
     }
 }

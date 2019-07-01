@@ -43,7 +43,7 @@
             this.button1.Size = new System.Drawing.Size(130, 129);
             this.button1.TabIndex = 0;
             this.button1.Tag = "dkhp";
-            this.button1.Text = "DKHP";
+            this.button1.Text = "Đăng ký học phần";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.MoveToPageButton_Click);
             // 

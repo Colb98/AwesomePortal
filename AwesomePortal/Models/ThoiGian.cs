@@ -16,10 +16,10 @@ namespace AwesomePortal.Models
         public static ThoiGian Parse(Object o)
         {
             ThoiGian ans = new ThoiGian();
-            ans.thu = JsonGetter.getInt(o.ToString(), "thu");
-            string[] tiet = JsonGetter.getString(o.ToString(), "tiet").Split('-');
-            ans.tietBatDau = Int32.Parse(tiet[0]);
-            ans.tietKetThuc = Int32.Parse(tiet[1]);
+            JsonAttributes jsonAttr = JsonAttributeGetter.GetJsonAttributes();
+            ans.thu = JsonGetter.getInt(o.ToString(), jsonAttr.TG_THU());
+            ans.tietBatDau = JsonGetter.getInt(o.ToString(), jsonAttr.TG_TIETBD());
+            ans.tietKetThuc = JsonGetter.getInt(o.ToString(), jsonAttr.TG_TIETKT());
             return ans;
         }
     }
